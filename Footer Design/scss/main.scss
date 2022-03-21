@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Mulish', sans-serif;
+    &:focus{
+        outline: none;
+    }
+}
+
+
+html , body{
+    height: 100%;
+}
+
+body{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    margin-top: auto;
+    padding: 50px;
+    border-top: 5px solid #10182F;
+    background: #fff;
+    
+    .footer-top{
+        display: flex;
+        .footer-logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            padding-left: 40px;
+            .logo{
+            font-size: 30px;
+            font-weight: bold;
+            color: #10182F;
+            margin-bottom: 10px;
+        }
+        span{
+            color: #545D7A;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+     }
+
+
+        .footer-menu{
+            display: flex;
+            margin-left: auto;
+            nav{
+                max-height: 323px;
+                min-width: 180px;
+                margin-right: 40px;
+                h5{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #222C46;
+                    margin-bottom: 15px;
+                }
+                ul{
+                    padding: 25px 0;
+                    li{
+                        a{
+                            display: inline-block;
+                            position: relative;
+                            font-size: 16px;
+                            line-height: 40px;
+                            color: #545D7A;
+                            transition: 300ms color;
+                            &::before{
+                                content: '';
+                                height: 3px;
+                                position: absolute;
+                                bottom: 8px;
+                                left: 0;
+                                background: #222C46;
+                                width: 0;
+                                transition: 300ms width;
+                            }
+                            &:hover{
+                                color: #000;
+                                &::before{
+                                    width: 100%;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .footer-bottom{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 85px;
+
+        p{
+            font-size: 14px;
+            color: #545D7A;
+
+        }
+        .footer-menu{
+            ul{
+                display: flex;
+                li{
+                    margin: 0 45px;
+                    a{
+                        display: block;
+                        font-size: 14px;
+                        color: #545D7A;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            height: 3px;
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            background: #222C46;
+                            width: 0;
+                            transition: 300ms width;
+                        }
+                        &:hover{
+                            color: #000;
+                            &::before{
+                                width: 100%;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+        .footer-social{
+            display: flex;
+            li{
+                padding-right: 35px;
+                a{
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: 300ms background;
+                     &:hover{
+                        background-color: rgba(#545D7A,.20);
+                    }
+                    img{
+                        opacity: .55;
+                        transition: 300ms opacity;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
